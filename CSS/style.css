@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
@@ -34,6 +35,9 @@ body {
     margin-right: 5px;
 }
 
+
+
+
 .mainContainer {
     padding: 80px;
 }
@@ -41,7 +45,7 @@ body {
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 15px;
+    gap: 60px;
 }
 
 .products img {
@@ -51,10 +55,14 @@ body {
 }
 
 img:hover{
-opacity: 50%;
+opacity: 70%;
 transition: all 0.3s;
 transform: scale(103%);
 }
+
+
+
+
 
 
 .descriptionAndPrice {
@@ -71,3 +79,89 @@ transform: scale(103%);
 .products p.descriptionAndPrice {
     color: #000000;
 }
+
+
+
+
+
+
+.offCanvasSideBar {
+    position: fixed;
+    top: 0;
+    right: -350px; 
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    padding: 0px;
+    padding-top: 0px;
+    overflow-y: auto; 
+}
+
+.offCanvasSideBarHeader {
+    display: flex;
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    padding: 50px;
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.offCanvasSideBarHeader img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.offCanvasSideBarProducts {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.offCanvasSideBarPrice {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.offCanvasSideBarCheckout {
+    background-color: #b62424;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    width: 14%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+}
+
+.offCanvasSideBarCheckout:hover {
+    background-color: #a12323; 
+}
+
+.offCanvasSideBar.active {
+    right: 0;
+}
+
